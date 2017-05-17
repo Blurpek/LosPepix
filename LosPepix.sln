@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LosPepix", "LosPepix.csproj", "{3A87222C-E7D1-64C6-6C92-646383E8F694}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LosPepix.Editor", "LosPepix.Editor.csproj", "{D0D7C760-17E1-FB91-5915-4070F8DC6DDC}"

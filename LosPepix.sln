@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LosPepix", "LosPepix.csproj", "{3A87222C-E7D1-64C6-6C92-646383E8F694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LosPepix.Editor", "LosPepix.Editor.csproj", "{D0D7C760-17E1-FB91-5915-4070F8DC6DDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A87222C-E7D1-64C6-6C92-646383E8F694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A87222C-E7D1-64C6-6C92-646383E8F694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A87222C-E7D1-64C6-6C92-646383E8F694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A87222C-E7D1-64C6-6C92-646383E8F694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D7C760-17E1-FB91-5915-4070F8DC6DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D7C760-17E1-FB91-5915-4070F8DC6DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D7C760-17E1-FB91-5915-4070F8DC6DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D7C760-17E1-FB91-5915-4070F8DC6DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

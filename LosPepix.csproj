@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scipts\Camera\FollowPlayer.cs" />
+    <Compile Include="Assets\Scipts\Player\GameManager.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerJump.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />

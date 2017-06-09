@@ -93,9 +93,9 @@ public class FieldOfView : MonoBehaviour {
 
 	ViewCastInfo ViewCast(float globalAngle) {
 		Vector3 direction = DirectionFromAngle (globalAngle, true);
-		RaycastHit hit;
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, direction, viewRadius, obstacleMask);
 
-		if (Physics.Raycast (transform.position, direction, out hit, viewRadius, obstacleMask)) {
+		if (hit) {
 			return new ViewCastInfo (true, hit.point, hit.distance, globalAngle);
 		} else {
 			return new ViewCastInfo (false, transform.position + direction*viewRadius, viewRadius, globalAngle);
@@ -104,7 +104,7 @@ public class FieldOfView : MonoBehaviour {
 
 	void FindVisibleTargets() {
 		visibleTargets.Clear ();
-		Collider[] targetsInViewRadius = Physics.OverlapSphere (transform.position, viewRadius, targetMask);
+		Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll (transform.position, viewRadius, targetMask);
 
 		for (int i = 0; i < targetsInViewRadius.Length; i++) {
 			Transform target = targetsInViewRadius [i].transform;
@@ -112,7 +112,7 @@ public class FieldOfView : MonoBehaviour {
 			if (Vector3.Angle (transform.right, directionToTarget) < viewAngle / 2) {
 				float distanceToTarget = Vector3.Distance (transform.position, target.position);
 
-				if (!Physics.Raycast (transform.position, directionToTarget, distanceToTarget, obstacleMask)) {
+				if (!Physics2D.Raycast (transform.position, directionToTarget, distanceToTarget, obstacleMask)) {
 					visibleTargets.Add (target);
 				}
 			}

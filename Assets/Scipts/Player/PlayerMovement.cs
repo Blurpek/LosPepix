@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
 
     public float speed;
@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        /*if (!isLocalPlayer)
+        {
+            return;
+        }*/
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizontal, 0.0f);
         rb2D.AddForce(movement * speed);

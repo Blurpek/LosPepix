@@ -1,12 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scipts\Shaders\UnlitObject.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scipts\Shaders\SpriteMaskColorOff.shader">
     <Files>
       <File FileName="Assets\Scipts\FieldOfView.cs" Line="1" Column="1" />
       <File FileName="Assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scipts\Shaders\Stencil Mask.shader" Line="23" Column="14" />
-      <File FileName="Assets\Scipts\Shaders\Stencil Object.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scipts\Shaders\UnlitObject.shader" Line="60" Column="13" />
+      <File FileName="Assets\Scipts\Shaders\Stencil Mask.shader" Line="75" Column="15" />
+      <File FileName="Assets\Scipts\Shaders\UnlitObject.shader" Line="23" Column="19" />
+      <File FileName="Assets\Scipts\Shaders\SpriteMaskColorOff.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scipts\Shaders\UnlitMask.shader" Line="35" Column="18" NotebookId="1" />
+      <File FileName="Assets\Scipts\Shaders\Stencil Object.shader" Line="12" Column="13" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

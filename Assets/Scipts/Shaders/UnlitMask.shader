@@ -2,21 +2,28 @@
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_Color ("Color", Color) = (1,1,1,1)
+		_MainTex ("Diffuse (RGB) Spec(A)", 2D) = "white" {}
 	}
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" }
 		ColorMask 0
+		Tags { "RenderType"="Opaque" "Queue"="Geometry" }
+
 		ZWrite off
 		LOD 200
 
-		Stencil {
-			Ref 1
-			Pass replace
-		}
+
 		Pass
 		{
+		Stencil {
+	                Ref 2
+	                Comp notEqual
+	                Pass keep 
+	                Fail decrWrap 
+	                ZFail keep
+	            }
+
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -60,5 +67,30 @@
 			}
 			ENDCG
 		}
+		Pass {
+	            Stencil {
+	                Ref 2
+	                Comp equal
+	            }
+
+	            CGPROGRAM
+	            #pragma vertex vert
+	            #pragma fragment frag
+	            struct appdata {
+	                float4 vertex : POSITION;
+	            };
+	            struct v2f {
+	                float4 pos : SV_POSITION;
+	            };
+	            v2f vert(appdata v) {
+	                v2f o;
+	                o.pos = UnityObjectToClipPos(v.vertex);
+	                return o;
+	            }
+	            half4 frag(v2f i) : SV_Target {
+	                return half4(1,0,1,1);
+	            }
+	            ENDCG
+	        }
 	}
 }

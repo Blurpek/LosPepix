@@ -12,6 +12,7 @@ Shader "Custom/Stencil Mask" {
 	SubShader {
 	        Tags { "RenderType"="Transparent" "Queue"="Geometry"}
 	        Blend SrcAlpha OneMinusSrcAlpha
+	        ZWrite off
 	        Pass {
 	            Stencil {
 	                Ref 2
@@ -20,6 +21,7 @@ Shader "Custom/Stencil Mask" {
 	                Fail decrWrap 
 	                ZFail keep
 	            }
+	            ColorMask 0
 
 	        CGPROGRAM
 			#pragma vertex vert
@@ -71,6 +73,7 @@ Shader "Custom/Stencil Mask" {
 	                Ref 2
 	                Comp equal
 	            }
+
 
 	            CGPROGRAM
 	            #pragma vertex vert
